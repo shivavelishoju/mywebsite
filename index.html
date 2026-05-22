@@ -269,39 +269,36 @@
 
             </div>
 
-            <!-- Resume Section -->
-            <div class="flex flex-col sm:flex-row gap-4 mt-8">
+            <div class="flex flex-col sm:flex-row gap-4">
 
-                <!-- Resume Dropdown -->
-                <select id="resumeSelect"
-                    class="bg-slate-800 border border-slate-600 text-white px-5 py-3 rounded-full focus:outline-none focus:border-primary">
+    <select id="resumeSelect"
+        class="bg-slate-800 border border-slate-700 text-white px-5 py-3 rounded-2xl">
 
-                    <option value="">Select Resume</option>
+        <option value="">Choose Resume</option>
 
-                    <option value="resume/Shiva_ECE_Resume.pdf">
-                        ECE Resume
-                    </option>
+        <option value="/resume/Shiva_ECE_Resume.pdf">
+            Embedded / ECE Resume
+        </option>
 
-                    <option value="resume/Shiva_Java_Resume.pdf">
-                        Java Developer Resume
-                    </option>
+        <option value="/resume/Shiva_Java_Resume.pdf">
+            Java Developer Resume
+        </option>
 
-                    <option value="resume/Shiva_ManualTesting_Resume.pdf">
-                        Manual Testing Resume
-                    </option>
+        <option value="/resume/Shiva_ManualTesting_Resume.pdf">
+            Manual Testing Resume
+        </option>
 
-                </select>
+    </select>
 
-                <!-- Download Button -->
-                <button onclick="downloadResume()"
-                    class="px-6 py-3 rounded-full btn-primary font-medium inline-flex items-center justify-center">
+    <button onclick="downloadResume()"
+        class="px-6 py-3 rounded-2xl btn-primary font-semibold">
 
-                    <i class="fas fa-download mr-2"></i>
-                    Download Resume
+        <i class="fas fa-download mr-2"></i>
+        Download Resume
 
-                </button>
+    </button>
 
-            </div>
+</div>
 
         </div>
 
@@ -517,6 +514,26 @@
     }
     
     </script>
+
+    <script>
+
+function downloadResume() {
+
+    const resume = document.getElementById("resumeSelect").value;
+
+    if (!resume) {
+
+        alert("Please select a resume");
+        return;
+
+    }
+
+    // Open file directly
+    window.open(resume, "_blank");
+
+}
+
+</script>
         
 <!-- Experience Timeline -->
 <div class="mt-20">
