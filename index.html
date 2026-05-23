@@ -302,7 +302,7 @@
 .search-container {
     position: relative;
 
-    width: 550px;
+    width: 600px;
     height: 32px;
 
     display: flex;
@@ -441,7 +441,7 @@
 <!-- Hero Section -->
 <!-- Background Slider -->
 
-<div class="bg-slider">
+<div class="bg-slider"> 
     <div class="bg-slide active" style="background-image:url('https://images.unsplash.com/photo-1518770660439-4636190af475');"></div>
 
     <div class="bg-slide" style="background-image:url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5');"></div>
@@ -518,28 +518,33 @@
 </button>
 
             <!-- Resume Section -->
-            <!-- <div class="flex flex-col sm:flex-row gap-4 mt-8">
+            
+                <div class="flex flex-col sm:flex-row gap-4 mt-8">
 
-                Resume Dropdown
-                <select id="resumeSelect"
-                    class="bg-slate-800 border border-slate-600 text-white px-5 py-3 rounded-full focus:outline-none focus:border-primary">
+                <!-- Resume Dropdown -->
+                <!-- Resume Dropdown -->
+<select id="resumeSelect"
+class="bg-slate-800 border border-slate-700 text-white px-4 py-3 rounded-full focus:outline-none focus:border-primary">
 
-                    <option value="">Select Resume</option>
+<option value="">Select Resume</option>
 
-                    <option value="resume/Shiva_ECE_Resume.pdf">
-                        ECE Resume
-                    </option>
+<!-- ECE Resume -->
+<option value="https://drive.google.com/file/d/1h2V1ZmvhcwtC1cqu-4ip1dtJnT8L5IXO/view?usp=drive_link">
+    Core ECE Resume
+</option>
 
-                    <option value="resume/Shiva_Java_Resume.pdf">
-                        Java Developer Resume
-                    </option>
+<!-- Java Resume -->
+<option value="https://drive.google.com/file/d/11q0IcUZPtw736Mo_QFgI-SPiHFKhtViW/view?usp=drive_link">
+    Java Developer Resume
+</option>
 
-                    <option value="resume/Shiva_ManualTesting_Resume.pdf">
-                        Manual Testing Resume
-                    </option>
+<!-- Manual Testing Resume -->
+<option value="https://drive.google.com/file/d/1Z_XZ1UdlLzjCqylogyV94QWNSeJt7Etp/view?usp=drive_link">
+    Manual Testing Resume
+</option>
 
-                </select>
-
+</select>
+<!-- 
                 Download Button
                 <button onclick="downloadResume()"
                     class="px-6 py-3 rounded-full btn-primary font-medium inline-flex items-center justify-center">
@@ -547,9 +552,9 @@
                     <i class="fas fa-download mr-2"></i>
                     Download Resume
 
-                </button>
+                </button> -->
 
-            </div> -->
+            </div> 
 
         </div>
 
@@ -693,25 +698,28 @@
                 <!-- Resume Section -->
                 <div class="flex flex-col sm:flex-row gap-4">
 
-                    <!-- Resume Dropdown -->
-                    <select id="resumeSelect"
-                        class="bg-slate-800 border border-slate-600 text-white px-5 py-3 rounded-full focus:outline-none focus:border-primary">
+                  <!-- Resume Dropdown -->
+<select id="resumeSelect"
+class="bg-slate-800 border border-slate-600 text-white px-5 py-3 rounded-full focus:outline-none focus:border-primary">
 
-                        <option value="">Select Resume</option>
+<option value="">Select Resume</option>
 
-                        <option value="resume/Shiva_ECE_Resume.pdf">
-                            ECE Resume
-                        </option>
+<!-- ECE Resume -->
+<option value="https://drive.google.com/file/d/1h2V1ZmvhcwtC1cqu-4ip1dtJnT8L5IXO/view?usp=drive_link">
+    ECE Resume
+</option>
 
-                        <option value="resume/Shiva_Java_Resume.pdf">
-                            Java Developer Resume
-                        </option>
+<!-- Java Resume -->
+<option value="https://drive.google.com/file/d/11q0IcUZPtw736Mo_QFgI-SPiHFKhtViW/view?usp=drive_link">
+    Java Developer Resume
+</option>
 
-                        <option value="resume/Shiva_ManualTesting_Resume.pdf">
-                            Manual Testing Resume
-                        </option>
+<!-- Manual Testing Resume -->
+<option value="https://drive.google.com/file/d/1Z_XZ1UdlLzjCqylogyV94QWNSeJt7Etp/view?usp=drive_link">
+    Manual Testing Resume
+</option>
 
-                    </select>
+</select>
 
                     <!-- Download Button -->
                     <button onclick="downloadResume()"
@@ -730,7 +738,21 @@
 
     </div>
 </section>
+<script>
 
+    const resumeSelect = document.getElementById("resumeSelect");
+    
+    resumeSelect.addEventListener("change", function() {
+    
+        const selectedResume = this.value;
+    
+        if (selectedResume) {
+            window.open(selectedResume, "_blank");
+        }
+    
+    });
+    
+    </script>
 <script>
     const topBtn = document.getElementById("topBtn");
     
